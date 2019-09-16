@@ -22,6 +22,8 @@ public class BundleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bundle);
         usernameInput = findViewById(R.id.input_username);
+        nameInput = findViewById(R.id.input_name);
+        ageInput = findViewById(R.id.input_age);
     }
 
     public void handleSubmit(View view) {
@@ -30,7 +32,10 @@ public class BundleActivity extends AppCompatActivity {
         int age = Integer.parseInt(ageInput.getText().toString());
 
         Intent intent = new Intent(this, ProfileBundleActivity.class);
-        Bundle extras = getIntent().getExtras();
+
+        intent.putExtra(USERNAME_KEY, username);
+        intent.putExtra(NAME_KEY, name);
+        intent.putExtra(AGE_KEY, age);
 
         startActivity(intent);
     }

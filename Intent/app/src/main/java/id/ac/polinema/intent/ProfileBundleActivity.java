@@ -12,6 +12,7 @@ public class ProfileBundleActivity extends AppCompatActivity {
     private TextView nameText;
     private TextView ageText;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +24,16 @@ public class ProfileBundleActivity extends AppCompatActivity {
         ageText = findViewById(R.id.text_age);
 
         Bundle extras = getIntent().getExtras();
+
+        String username = extras.getString(BundleActivity.USERNAME_KEY);
+        String name = extras.getString(BundleActivity.NAME_KEY);
+        int age = extras.getInt(BundleActivity.AGE_KEY);
+
         if (extras != null) {
             // TODO: display value here
-            String username = usernameText.getText().toString();
-            String name = nameText.getText().toString();
-
+            usernameText.setText(username);
+            nameText.setText(name);
+            ageText.setText(String.valueOf(age));
         }
     }
 }
