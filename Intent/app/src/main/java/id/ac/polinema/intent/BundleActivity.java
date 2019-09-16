@@ -28,5 +28,10 @@ public class BundleActivity extends AppCompatActivity {
         String username = usernameInput.getText().toString();
         String name = nameInput.getText().toString();
         int age = Integer.parseInt(ageInput.getText().toString());
+
+        Intent intent = new Intent(this, ProfileBundleActivity.class);
+        Bundle extras = getIntent().getExtras();
+
+        startActivity(intent);
     }
 }
