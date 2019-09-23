@@ -9,33 +9,30 @@ import android.widget.EditText;
 
 public class BundleActivity extends AppCompatActivity {
 
-    public static final String USERNAME_KEY = "username";
-    public static final String NAME_KEY = "name";
-    public static final String AGE_KEY = "age";
+    public static final String VALUE1_KEY = "value1";
+    public static final String VALUE2_KEY = "value2";
 
-    private EditText usernameInput;
-    private EditText nameInput;
-    private EditText ageInput;
+    private EditText value1Input;
+    private EditText value2Input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bundle);
-        usernameInput = findViewById(R.id.input_username);
-        nameInput = findViewById(R.id.input_name);
-        ageInput = findViewById(R.id.input_age);
+        value1Input = findViewById(R.id.input_value1);
+        value2Input = findViewById(R.id.input_value2);
     }
 
     public void handleSubmit(View view) {
-        String username = usernameInput.getText().toString();
-        String name = nameInput.getText().toString();
-        int age = Integer.parseInt(ageInput.getText().toString());
+//        String value1 = value1Input.getText().toString();
+//        String value2 = value2Input.getText().toString();
+        int value1 = Integer.parseInt(value1Input.getText().toString());
+        int value2 = Integer.parseInt(value2Input.getText().toString());
 
         Intent intent = new Intent(this, ProfileBundleActivity.class);
 
-        intent.putExtra(USERNAME_KEY, username);
-        intent.putExtra(NAME_KEY, name);
-        intent.putExtra(AGE_KEY, age);
+        intent.putExtra(VALUE1_KEY, value1);
+        intent.putExtra(VALUE2_KEY, value2);
 
         startActivity(intent);
     }
