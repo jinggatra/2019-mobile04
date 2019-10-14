@@ -2,9 +2,12 @@ package id.ac.polinema.intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import id.ac.polinema.intent.activity.OtherEquation;
 
 public class ProfileBundleActivity extends AppCompatActivity {
 
@@ -31,5 +34,10 @@ public class ProfileBundleActivity extends AppCompatActivity {
             // TODO: display value here
             valueText.setText(String.valueOf(sum));
         }
+    }
+
+    public void handleExitMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -36,5 +36,13 @@
             android:textSize="20sp" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="handleExitMain"
+        />
+
 
 </LinearLayout>
