@@ -17,7 +17,14 @@
             android:onClick="handleBundleIntent"
             />
 
-        <Button
+    <Button
+        android:id="@+id/button_another"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="handleOtherEquationIntent"
+        android:text="Test Other Equation" />
+
+    <Button
             android:id="@+id/button_exit"
             android:text="@string/exit"
             android:layout_width="match_parent"

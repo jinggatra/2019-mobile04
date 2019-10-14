@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import id.ac.polinema.intent.activity.OtherEquation;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void handleBundleIntent(View view) {
         Intent intent = new Intent(this, BundleActivity.class);
+        startActivity(intent);
+    }
+
+    public void handleOtherEquationIntent(View view) {
+        Intent intent = new Intent(this, OtherEquation.class);
         startActivity(intent);
     }
 }

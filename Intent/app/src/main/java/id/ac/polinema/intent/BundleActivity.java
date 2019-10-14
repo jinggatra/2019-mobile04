@@ -24,8 +24,6 @@ public class BundleActivity extends AppCompatActivity {
     }
 
     public void handleSubmit(View view) {
-//        String value1 = value1Input.getText().toString();
-//        String value2 = value2Input.getText().toString();
         int value1 = Integer.parseInt(value1Input.getText().toString());
         int value2 = Integer.parseInt(value2Input.getText().toString());
 
